@@ -1,0 +1,52 @@
+# 配置Mybatis的包的别名，在mapper.xml文件中xxxType="xxx" 此处直接可以写实体类的类名即可，不需要将全类名都写上
+#<select id="queryAlluser" resultType="User">
+#       select * from  user
+#    </select>
+#<select id="queryAlluser" resultType="com.xxx.xxx.entity.User">
+#       select * from  user
+#    </select>
+#mybatis plus 设置
+mybatis-plus:
+  mapper-locations: classpath*:com/fantasy/study/mapper/xml/*Mapper.xml
+  global-config:
+    # 关闭MP3.0自带的banner
+    banner: false
+
+# 端口的配置
+server:
+  port: 8081
+# 数据库访问配置
+spring:
+  profiles:
+    active: dev
+  aop:
+    proxy-target-class: true
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/user?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+      username: root
+      password: 123qwe,.
+  redis:
+    # Redis数据库索引（默认为0）
+    database: 0
+    # Redis服务器地址
+    host: 127.0.0.1
+    # Redis服务器连接端口
+    port: 6379
+    # Redis服务器连接密码（默认为空）
+    password:
+    jedis:
+      pool:
+        # 连接池最大连接数（使用负值表示没有限制）
+        max-active: 200
+        # 连接池最大阻塞等待时间（使用负值表示没有限制）
+        max-wait: -1
+        # 连接池中的最大空闲连接
+        max-idle: 10
+        # 连接池中的最小空闲连接
+        min-idle: 0
+    # 连接超时时间（毫秒）
+    timeout: 5000
+
