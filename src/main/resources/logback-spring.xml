@@ -107,7 +107,7 @@
             <level>info</level>
         </filter>
         <encoder charset="utf-8">
-            <pattern>${CONSOLE_LOG_PATTERN}</pattern>
+            <pattern>${log.pattern}</pattern>
         </encoder>
     </appender>
 
