@@ -13,8 +13,11 @@ mybatis-plus:
     banner: false
 
 # 端口的配置
+# 项目名
 server:
-  port: 8081
+  port: 8080
+#  servlet:
+#    context-path: /fantasy
 # 数据库访问配置
 spring:
   profiles:
@@ -27,6 +30,7 @@ spring:
       driver-class-name: com.mysql.cj.jdbc.Driver
       url: jdbc:mysql://localhost:3306/user?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
       username: root
+#      password: root
       password: 123qwe,.
   redis:
     # Redis数据库索引（默认为0）
@@ -49,4 +53,7 @@ spring:
         min-idle: 0
     # 连接超时时间（毫秒）
     timeout: 5000
+  # 国际化配置，需要使用模板引擎然后使用#{}引用，根据浏览器的语言信息来控制。
+  messages:
+    basename: i18n.login
 

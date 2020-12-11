@@ -37,12 +37,12 @@ public class MyController {
      * 返回一个html界面，申明ModelAndView
      * 语法：
      *  ModelAndView modelAndView = new ModelAndView();
-     *  modelAndView.setViewName("/index.html");
+     *  modelAndView.setViewName("/login.html");
      */
     public ModelAndView adduser(User user){
         boolean flag = userMapper.AddUser((User) user);
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("/index.html");
+        modelAndView.setViewName("/login.html");
         if (flag) {
             return modelAndView;
         } else {

@@ -99,8 +99,8 @@ public class RedisUtil {
      * @author lannis
      * @date 2019年8月23日 下午2:05:36
      */
-    public Object get(String key) {
-        return key == null ? null : redisTemplate.opsForValue().get(key);
+    public String get(String key) {
+        return key == null ? null : String.valueOf(redisTemplate.opsForValue().get(key));
     }
 
     /**
