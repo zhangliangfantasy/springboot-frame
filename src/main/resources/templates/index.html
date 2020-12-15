@@ -2,12 +2,12 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>crud</title>
 </head>
 <body >
 <form method="post" action="/user/login" >
-    <input name="username" type="text"  placeholder="请输入用户名"/>
-    <input type="password" name="password"  />
+    <label>用户名：</label><input name="username" type="text"  placeholder="请输入用户名"/>
+    <label>密码：</label><input type="password" name="password"  />
     <input type="submit" th:value="登录"/>
 </form>
 
@@ -20,12 +20,22 @@
 </form>
 
 
-<form method="get" action="/user/adduser">
+<form method="post" action="/user/add">
     <input name="userid" type="number" placeholder="请输入用户id" />
     <input name="username" type="text"  placeholder="请输入用户名" />
     <input name="password" type="password" placeholder="请输入密码" />
     <input name="userage" type="number" placeholder="请输入年龄" />
     <input type="submit" th:value="新增"/>
 </form>
+
+<form method="post" action="/user/del">
+    <input name="id" type="number" placeholder="请输入id" />
+    <input type="submit" th:value="删除"/>
+</form>
+
+<form method="get" action="/user/export">
+    <input type="submit" th:value="导出"/>
+</form>
+
 </body>
 </html>

@@ -1,4 +1,4 @@
-package com.fantasy.study.entity;
+package com.fantasy.springbootframework.entity;
 
 public class User {
     private int userid;

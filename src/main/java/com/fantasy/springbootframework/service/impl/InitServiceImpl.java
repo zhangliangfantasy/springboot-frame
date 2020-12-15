@@ -1,6 +1,6 @@
-package com.fantasy.study.service.impl;
+package com.fantasy.springbootframework.service.impl;
 
-import com.fantasy.study.utils.RedisUtil;
+import com.fantasy.springbootframework.utils.RedisUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

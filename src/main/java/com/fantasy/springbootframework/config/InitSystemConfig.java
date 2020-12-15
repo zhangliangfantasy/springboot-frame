@@ -1,7 +1,7 @@
-package com.fantasy.study.config;
+package com.fantasy.springbootframework.config;
 
-import com.fantasy.study.service.impl.InitServiceImpl;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.fantasy.springbootframework.service.impl.InitServiceImpl;
+import com.fantasy.springbootframework.service.impl.InitServiceImpl;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.EnvironmentAware;
 import org.springframework.core.annotation.Order;

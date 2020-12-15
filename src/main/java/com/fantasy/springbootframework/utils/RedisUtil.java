@@ -1,4 +1,4 @@
-package com.fantasy.study.utils;
+package com.fantasy.springbootframework.utils;
 
 import java.util.Collection;
 import java.util.List;

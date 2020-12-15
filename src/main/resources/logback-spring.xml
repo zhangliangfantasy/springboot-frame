@@ -111,13 +111,13 @@
         </encoder>
     </appender>
 
-<!--    生产环境:打印控制台和输出到文件-->
-<!--    <springProfile name="prod">-->
-<!--        <root level="info">-->
-<!--            <appender-ref ref="CONSOLE"/>-->
-<!--            <appender-ref ref="asyncFileAppender"/>-->
-<!--        </root>-->
-<!--    </springProfile>-->
+    <!--生产环境:打印控制台和输出到文件-->
+    <springProfile name="prod">
+        <root level="info">
+            <appender-ref ref="CONSOLE"/>
+            <appender-ref ref="asyncFileAppender"/>
+        </root>
+    </springProfile>
 
     <!--开发环境:打印控制台-->
     <springProfile name="dev">
@@ -131,11 +131,11 @@
     </springProfile>
 
     <!--测试环境:打印控制台-->
-<!--    <springProfile name="test">-->
-<!--        &lt;!&ndash; 打印sql &ndash;&gt;-->
-<!--        <logger name="com.yunchuang.dao" level="DEBUG"/>-->
-<!--        <root level="info">-->
-<!--            <appender-ref ref="CONSOLE"/>-->
-<!--        </root>-->
-<!--    </springProfile>-->
+    <springProfile name="test">
+        <!-- 打印sql -->
+        <logger name="com.yunchuang.dao" level="DEBUG"/>
+        <root level="info">
+            <appender-ref ref="CONSOLE"/>
+        </root>
+    </springProfile>
 </configuration>

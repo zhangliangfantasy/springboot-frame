@@ -1,23 +1,21 @@
-package com.fantasy.study.mapper;
+package com.fantasy.springbootframework.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.fantasy.study.entity.User;
-import org.apache.ibatis.annotations.Mapper;
+import com.fantasy.springbootframework.entity.User;
 
 import java.util.List;
-
 
 public interface UserMapper extends BaseMapper<User> {
 
     List<User> queryAlluser();
 
-    User queryuserbyid(int userid);
+    User queryuserbyname(String name);
+
+    User queryuserbyid(int id);
 
     boolean AddUser(User user);
 
     boolean DelUser(int id);
 
     boolean UpdUser(User user);
-
-    User queryuserbyname(String name);
 }
